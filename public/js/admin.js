@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -37394,23 +37394,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-__webpack_require__(/*! ./events */ "./resources/js/events.js");
-
-/***/ }),
-
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
+/***/ "./resources/js/admin.js":
+/*!*******************************!*\
+  !*** ./resources/js/admin.js ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37459,74 +37446,14 @@ AOS.init({
 
 /***/ }),
 
-/***/ "./resources/js/events.js":
-/*!********************************!*\
-  !*** ./resources/js/events.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-$(document).ready(function () {
-  $('#menu-bar').click(function () {
-    $(this).toggleClass('fa-times');
-    $('.narbar').toggleClass('nav-toggle');
-  });
-  $(window).on('scroll load', function () {
-    $('#menu-bar').removeClass('fa-times');
-    $('.narbar').removeClass('nav-toggle');
-    $('section').each(function () {
-      var top = $(window).scrollTop();
-      var height = $(this).height();
-      var id = $(this).attr('id');
-      var offset = $(this).offset().top - 200;
-
-      if (top > offset && top < offset + height) {
-        $('.narbar ul li a').removeClass('active');
-        $('.narbar').find("[href=\"#".concat(id, "\"]")).addClass('active');
-      }
-    });
-  });
-  $('.menu .list .btn').click(function () {
-    $(this).addClass('active').siblings().removeClass('active');
-    var src = $(this).attr('data-src');
-    $('#menu-img').attr('src', src);
-  });
-});
-
-/***/ }),
-
-/***/ "./resources/sass/admin.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/admin.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
-/*!*****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ***!
-  \*****************************************************************************************/
+/***/ 1:
+/*!*************************************!*\
+  !*** multi ./resources/js/admin.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\jspos\Documents\laravel\Restaurante\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\jspos\Documents\laravel\Restaurante\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\jspos\Documents\laravel\Restaurante\resources\sass\admin.scss */"./resources/sass/admin.scss");
+module.exports = __webpack_require__(/*! C:\Users\jspos\Documents\laravel\Restaurante\resources\js\admin.js */"./resources/js/admin.js");
 
 
 /***/ })
